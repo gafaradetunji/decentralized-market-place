@@ -1,0 +1,11 @@
+services:
+  mongo:
+    image: mongo:7.0
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=marketplace
+volumes:
+  mongo-data:
